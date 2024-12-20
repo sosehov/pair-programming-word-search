@@ -35,4 +35,18 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+  it("should return false if the array is empty", function() {
+    const result = wordSearch([], 'SEND');
+    assert.isFalse(result);
+  });
+
+  it("should return false if the array elements are not strings", function() {
+    const result = wordSearch([
+      [1, 2, 3, 4, 5, 6],
+      [7, 8, 1, 2, 3, 4],
+      [5, 6, 7, 8, 1, 2],
+     ], 'SEND');
+    assert.isFalse(result);
+  });
 });
