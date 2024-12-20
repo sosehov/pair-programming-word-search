@@ -1,4 +1,8 @@
 const wordSearch = (letters, word) => {
+  // Check the first and second arguments to be the expected type
+  if (!Array.isArray(letters) || typeof word !== 'string') {
+    return false;
+  }
   // Join the letters in each inner array to get strings
   const horizontalJoin = letters.map(ls => ls.join(''));
   for (const l of horizontalJoin) {
