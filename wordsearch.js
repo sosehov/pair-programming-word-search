@@ -9,7 +9,7 @@ const wordSearch = (letters, word) => {
     if (l.includes(word)) return true;
   }
   // Find the max length of the strings in horizontalJoin
-  const maxLength = Math.max(horizontalJoin.map(str => str.length));
+  const maxLength = Math.max(...horizontalJoin.map(str => str.length));
 
   // Initialize the array to store the verticalJoin result
   let verticalJoin = [];
